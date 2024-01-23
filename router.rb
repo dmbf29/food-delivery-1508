@@ -1,6 +1,5 @@
 class Router
   def initialize(meals_controller, customers_controller, sessions_controller)
-    # which controller(s) do we need?
     @meals_controller = meals_controller
     @customers_controller = customers_controller
     @sessions_controller = sessions_controller
@@ -37,6 +36,8 @@ class Router
     when 2 then @meals_controller.add
     when 3 then @customers_controller.list
     when 4 then @customers_controller.add
+    when 5 then '???'
+    when 6 then '???'
     when 9 then logout
     when 0 then stop
     else
@@ -46,8 +47,8 @@ class Router
 
   def route_rider_action(action)
     case action
-    when 1 then ''
-    when 2 then ''
+    when 1 then '???'
+    when 2 then '???'
     when 9 then logout
     when 0 then stop
     else
@@ -71,6 +72,8 @@ class Router
     puts "2 - Create a new meal"
     puts "3 - List all customers"
     puts "4 - Create a new customer"
+    puts "5 - List all undelivered orders"
+    puts "6 - Add a new order"
     puts "9 - Logout"
     puts "0 - Stop and exit the program"
   end
