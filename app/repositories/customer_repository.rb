@@ -2,7 +2,6 @@ require 'csv'
 require_relative '../models/customer'
 
 class CustomerRepository
-  attr_reader :customers
 
   def initialize(csv_file_path)
     @csv_file_path = csv_file_path
