@@ -25,6 +25,12 @@ class EmployeeRepository
     end
   end
 
+  def all_riders
+    @employees.select do |employee|
+      employee.rider?
+    end
+  end
+
   private
 
   def load_csv
